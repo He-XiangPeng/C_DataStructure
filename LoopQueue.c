@@ -1,13 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
  /**
   *	循环队列
   * 数组实现方式
   *
   * 
   */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 typedef struct Queue
 {
 	int * pBase;

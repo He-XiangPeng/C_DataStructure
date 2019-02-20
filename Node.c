@@ -1,11 +1,9 @@
-#include <stdio.h>
-
 /**
  *	链表的创建
  *
  * 
  */
-
+#include <stdio.h>
 typedef struct Node
 {
 	int data; // 数据域

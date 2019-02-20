@@ -1,13 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  *	创建一个非循环单链表
  *
  *
  * 
  */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 typedef struct Node
 {
 	int data;  // 数据域

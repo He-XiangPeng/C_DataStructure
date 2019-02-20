@@ -1,11 +1,9 @@
-#include <stdio.h>
 /**
  *	阶乘的递归实现方法
  *
  * 
  */
-
-
+#include <stdio.h>
 long fun(long n)
 {
 	if (1 == n)

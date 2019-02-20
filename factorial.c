@@ -1,11 +1,9 @@
-#include <stdio.h>
 /**
  *	阶乘的循环实现方法
  *
  * 
  */
-
-
+#include <stdio.h>
 int main(int argc, char const *argv[])
 {
 	int val;

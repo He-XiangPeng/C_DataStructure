@@ -1,10 +1,9 @@
-#include <stdio.h>
 /**
  *	汉诺塔
  *
  * 
  */
-
+#include <stdio.h>
 void hannoi(int, char, char, char);
 
 int main(int argc, char const *argv[])

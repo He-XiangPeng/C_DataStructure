@@ -1,11 +1,9 @@
-#include <stdio.h>
 /**
  *	求1+2+3+...+100的和
  *
  * 
  */
-
-
+#include <stdio.h>
 long sum(int n)
 {
 	if (1 == n)

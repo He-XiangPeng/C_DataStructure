@@ -1,13 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
 /**
  *	ArrayList的创建
  *
  * 
  */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 struct Arr
 {
 	int * pBase; // 存储的是数组的第一个元素的地址
