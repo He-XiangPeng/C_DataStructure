@@ -8,8 +8,10 @@ int main(void)
 {
 	int * p;
 	int i = 10;
+	int j;
+
 	p = &i;
-	*p = 25;
-	printf("i = %d\n", i);
+	j = *p = 25;
+	printf("i = %+d\n", i); // %+d输出int型的符号
 	return 0;
 }
