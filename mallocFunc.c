@@ -1,9 +1,9 @@
-/*
-	跨函数使用内存
-	动态分配内存
-	数据结构 = 个体的存储 + 个体的关系存储
-	算法 = 对存储数据的操作
- */
+/**
+* 跨函数使用内存
+* 动态分配内存
+* 数据结构 = 个体的存储 + 个体的关系存储
+* 算法 = 对存储数据的操作
+*/
 #include <stdio.h>
 #include <stdlib.h>
 struct Student
@@ -34,6 +34,7 @@ void showStudent(struct Student * pst)
 struct Student * createStudent(void)
 {
 	struct Student * p = (struct Student *)malloc(sizeof(struct Student));
+	// (struct Student *) 强制转换为此类型
 	p->sid = 99;
 	p->age = 88;
 	return p;

@@ -17,7 +17,7 @@ void init_arr(struct Arr * pArr, int length);
 bool append_arr(struct Arr * pArr, int val); // 追加
 bool insert_arr(struct Arr * pArr, int pos, int val);
 bool delete_arr(struct Arr * pArr, int pos, int * pVal);
-int get(struct Arr * pArr, int pos);
+int  get(struct Arr * pArr, int pos);
 bool is_empty(struct Arr * pArr);
 bool is_full(struct Arr * pArr);
 void sort_arr(struct Arr * pArr);
