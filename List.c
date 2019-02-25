@@ -58,6 +58,10 @@ int main(void)
 	return 0;
 }
 
+/**
+ * 创建一个非循环单链表
+ * @return  链表的头结点
+ */
 PNODE create_list(void)
 {
 	int len; // 用来存放有效节点的个数
@@ -95,9 +99,13 @@ PNODE create_list(void)
 	return pHead;
 }
 
+/**
+ * 遍历链表
+ * @param pHead 头结点
+ */
 void traverse_list(PNODE pHead)
 {
-	PNODE p = pHead->pNext;
+	PNODE p = pHead->pNext;// 至少有一个节点，即头结点
 	printf("L - >");
 	while (NULL != p) 
 	{
@@ -107,6 +115,11 @@ void traverse_list(PNODE pHead)
 	printf("NULL\n");
 }
 
+/**
+ * 链表是否为空
+ * @param  pHead 头结点
+ * @return       bool
+ */
 bool is_empty(PNODE pHead)
 {
 	if (pHead->pNext == NULL)
@@ -119,6 +132,11 @@ bool is_empty(PNODE pHead)
 	}
 }
 
+/**
+ * 链表的长度
+ * @param  pHead 头结点
+ * @return       长度
+ */
 int length_list(PNODE pHead)
 {
 	PNODE p = pHead->pNext;
@@ -132,6 +150,10 @@ int length_list(PNODE pHead)
 	return len;
 }
 
+/**
+ * 冒泡排序
+ * @param pHead 头结点
+ */
 void sort_list(PNODE pHead)
 {
 	int i, j, t;
@@ -188,8 +210,6 @@ bool insert_list(PNODE pHead, int pos, int val)
 	pNew->pNext = q;
 
 	return true;
-
-
 }
 
 bool delete_list(PNODE pHead, int pos, int * pVal)
@@ -217,7 +237,6 @@ bool delete_list(PNODE pHead, int pos, int * pVal)
 	q = NULL;
 
 	return true;
-
 }
 
 

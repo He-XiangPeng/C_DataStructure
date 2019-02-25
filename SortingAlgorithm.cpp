@@ -50,13 +50,12 @@ void showArr(int * p, int len)
  * i=1，j=2 -> 9 12 31 24
  * i=1，j=3 -> 9 12 31 24
  * i=2，j=3 -> 9 12 24 31
- * i=3，j=4=len,内层循环终止
- * i=4=len,外层循环终止
+ * 此时已排好序，所以i < len - 1即可
  */
 void bubbleSort(int * p, int len)
 {
 	int t;
-	for (int i = 0; i < len; ++i)
+	for (int i = 0; i < len - 1; ++i)
 	{
 		for (int j = i + 1; j < len; ++j)
 		{
