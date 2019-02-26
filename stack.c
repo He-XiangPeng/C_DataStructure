@@ -58,7 +58,7 @@ int main(void)
 
 /**
  * 初始化栈
- * @param pS 栈
+ * @param pS 栈指针
  */
 void init(PSTACK pS)
 {
@@ -80,22 +80,21 @@ void push(PSTACK pS, int val)
 {
 	PNODE pNew = (PNODE)malloc(sizeof(NODE));
 	pNew->data = val;
-	pNew->pNext = pS->pTop;
+	pNew->pNext = pS->pTop; // pS->pTop不能是pS->pBottom
 	pS->pTop = pNew;
-
 	return;
 }
 
 /**
  * 遍历栈中的元素
- * @param pS 栈
+ * @param pS 栈指针
  */
 void traverse(PSTACK pS)
 {
 	PNODE p = pS->pTop;
 	while (p != pS->pBottom) 
 	{
-	    printf("%d ->\n", p->data);
+	    printf("%d↓\n", p->data);
 	    p = p->pNext;
 	}
 
@@ -135,10 +134,8 @@ bool pop(PSTACK pS, int * pVal)
 		PNODE r = pS->pTop;
 		*pVal = r->data;
 		pS->pTop = r->pNext;
-
 		free(r);
 		r = NULL;
-
 		return true;
 	}
 

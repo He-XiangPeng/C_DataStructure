@@ -106,10 +106,10 @@ PNODE create_list(void)
 void traverse_list(PNODE pHead)
 {
 	PNODE p = pHead->pNext;// 至少有一个节点，即头结点
-	printf("L - >");
+	printf("L→ ");
 	while (NULL != p) 
 	{
-	    printf("%d - >", p->data);
+	    printf("%d→ ", p->data);
 	    p = p->pNext;
 	}
 	printf("NULL\n");
