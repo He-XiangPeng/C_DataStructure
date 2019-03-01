@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 typedef int ZHANGSAN;
-// 为int再重新夺取一个名字，
+// 为int再重新取一个名字，
 // zhangsan等价于int
 /*typedef struct Student
 {
@@ -31,6 +31,7 @@ int main(void)
 	int i = 10;
 	// 等价于ZHANGSAN i = 10;
 	ZHANGSAN j = 20;
+	printf("%d\n", i);
 	printf("%d\n", j);
 
 	// struct Student st;

@@ -43,7 +43,7 @@ void showArr(int * p, int len)
  * 冒泡排序
  * @param p   数组
  * @param len 数组长度
- * 比如数组为31 9 12 24 len=4
+ * 另一种写法的实例分析：比如数组为31 9 12 24 len=4
  * i=0，j=1 -> 9 31 12 24
  * i=0，j=2 -> 9 31 12 24
  * i=0，j=3 -> 9 31 12 24
@@ -57,13 +57,13 @@ void bubbleSort(int * p, int len)
 	int t;
 	for (int i = 0; i < len - 1; ++i)
 	{
-		for (int j = i + 1; j < len; ++j)
+		for (int j = 0; j < len - i - 1; ++j)
 		{
-			if (p[i] > p[j])
+			if (p[j] > p[j+1])
 			{
-				t = p[i];
-				p[i] = p[j];
-				p[j] = t;
+				t = p[j];
+				p[j] = p[j+1];
+				p[j+1] = t;
 			}
 		}
 	}

@@ -1,6 +1,10 @@
 /**
- *	汉诺塔
- *
+ * 汉诺塔
+ *    *
+ *   * *
+ *  * * *     
+ *    A      B     C
+ *    将A借助B移到C上
  * 
  */
 #include <stdio.h>
@@ -8,15 +12,15 @@ void hannoi(int, char, char, char);
 
 int main(int argc, char const *argv[])
 {
-	char ch1 = 'A';
-	char ch2 = 'B';
-	char ch3 = 'C';
+	const char ch1 = 'A';
+	const char ch2 = 'B';
+	const char ch3 = 'C';
 	int n;
 
 	printf("请输入要移动的盘子的个数：");
 	scanf("%d", &n);
 
-	hannoi(n, 'A', 'B', 'C');
+	hannoi(n, ch1, ch2, ch3);
 	return 0;
 }
 

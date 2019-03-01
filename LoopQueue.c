@@ -1,8 +1,7 @@
  /**
+  *	静态队列
   *	循环队列
   * 数组实现方式
-  *
-  * 
   */
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,7 +18,7 @@ bool en_queue(QUEUE *, int val);
 void traverse_queue(QUEUE *);
 bool full_queue(QUEUE *);
 bool out_queue(QUEUE*, int *);
-bool empty_queue(QUEUE *);
+bool isempty_queue(QUEUE *);
 
 int main(int argc, char const *argv[])
 {
@@ -132,7 +131,7 @@ void traverse_queue(QUEUE * pQ)
  * @param  pQ 队列指针
  * @return    真或假
  */
-bool empty_queue(QUEUE * pQ)
+bool isempty_queue(QUEUE * pQ)
 {
 	if (pQ->front == pQ->rear)
 	{
@@ -152,7 +151,7 @@ bool empty_queue(QUEUE * pQ)
  */
 bool out_queue(QUEUE * pQ, int * pVal)
 {
-	if (empty_queue(pQ))
+	if (isempty_queue(pQ))
 	{
 		return false;
 	}
