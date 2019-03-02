@@ -35,6 +35,9 @@ struct Student * createStudent(void)
 {
 	struct Student * p = (struct Student *)malloc(sizeof(struct Student));
 	// (struct Student *) 强制转换为此类型
+	// struct Student * p = malloc(sizeof(struct Student));
+	// 此句报错cannot initialize a variable of type 'struct Student *' 
+	// with an rvalue of type 'void *'
 	p->sid = 99;
 	p->age = 88;
 	return p;
