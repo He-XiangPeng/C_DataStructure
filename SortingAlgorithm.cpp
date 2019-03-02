@@ -5,16 +5,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-int * createArr(int);
+int * createArr(int len);
 void showArr(int *, int len);
 void bubbleSort(int *, int);
+void quickSort(int *, int, int);
+int FindPos(int * , int , int);
 
 int main(void)
 {
-	int * Array = createArr(8);
-	showArr(Array, 8);
-	bubbleSort(Array, 8);
-	showArr(Array, 8);
+	int * Array = createArr(8000);
+	showArr(Array, 8000);
+	// bubbleSort(Array, 8000);
+	quickSort(Array, 0, 7999);
+	showArr(Array, 8000);
 	return 0;
 }
 
@@ -68,3 +71,44 @@ void bubbleSort(int * p, int len)
 		}
 	}
 }
+
+/**
+ * 快速排序
+ * @param p     数组名
+ * @param First 第一个元素的下标
+ * @param Last  最后一个元素的下标
+ */
+void quickSort(int * p, int first, int last)
+{	
+	int pos; // 位置
+	if (first < last)
+	{
+		pos = FindPos(p, first, last);
+		quickSort(p, first, pos-1);
+		quickSort(p, pos+1, last);
+	}
+}
+
+int FindPos(int * p, int first, int last)
+{
+	int val = p[first];
+	while (first < last)
+	{
+		while (first < last && p[last] >= val)
+			--last;
+		p[first] = p[last];
+
+		while (first < last && p[first] <= val)
+			++first;
+		p[last] = p[first];
+	} // 终止while循环之后first和last一定是相等的
+	p[first] = val;
+	return last; // return first 也可以
+}
+
+
+
+
+
+
+
