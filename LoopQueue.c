@@ -13,12 +13,12 @@ typedef struct Queue
 	int rear;	
 }QUEUE;
 
-void init(QUEUE *);
-bool en_queue(QUEUE *, int val);
-void traverse_queue(QUEUE *);
-bool full_queue(QUEUE *);
-bool out_queue(QUEUE*, int *);
-bool isempty_queue(QUEUE *);
+void init(QUEUE * pQ);
+bool en_queue(QUEUE * pQ, int val);
+void traverse_queue(QUEUE * pQ);
+bool full_queue(QUEUE * pQ);
+bool out_queue(QUEUE * pQ, int * pVal);
+bool isempty_queue(QUEUE * pQ);
 
 int main(int argc, char const *argv[])
 {

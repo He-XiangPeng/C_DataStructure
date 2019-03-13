@@ -8,7 +8,7 @@
  * 
  */
 #include <stdio.h>
-void hannoi(int, char, char, char);
+void hannoi(int n, char A, char B, char C);
 
 int main(int argc, char const *argv[])
 {

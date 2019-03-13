@@ -17,8 +17,7 @@ PNODE create_list(void);
 void traverse_list(PNODE pHead);
 bool is_empty(PNODE pHead);
 int length_list(PNODE pHead);
-bool insert_list(PNODE, int, int);
-bool delete_list(PNODE, int, int *);
+bool delete_list(PNODE pHead, int pos, int * pVal);
 void sort_list(PNODE pHead);
 
 int main(void)

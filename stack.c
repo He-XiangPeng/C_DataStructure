@@ -19,11 +19,11 @@ typedef struct Stack
 	PNODE pBottom;
 }STACK, * PSTACK;
 
-void init(PSTACK);
-void push(PSTACK, int);
-void traverse(PSTACK);
-bool pop(PSTACK, int *);
-void clear(PSTACK);
+void init(PSTACK pS);
+void push(PSTACK pS, int val);
+void traverse(PSTACK pS);
+bool pop(PSTACK pS, int * pVal);
+void clear(PSTACK pS);
 
 int main(void)
 {

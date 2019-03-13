@@ -6,10 +6,10 @@
 #include <stdlib.h>
 #include <time.h>
 int * createArr(int len);
-void showArr(int *, int len);
-void bubbleSort(int *, int);
-void quickSort(int *, int, int);
-int FindPos(int * , int , int);
+void showArr(int * p, int len);
+void bubbleSort(int * p, int len);
+void quickSort(int * p, int first, int last);
+int FindPos(int * p, int first, int last);
 
 int main(void)
 {
